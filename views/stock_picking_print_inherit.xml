@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_print" model="ir.ui.view">
+        <field name="name">stock.picking.form.print.override</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Remove original print button for done state -->
+            <xpath expr="//button[@name='452']" position="replace">
+                <button name="action_print_delivery_with_count"
+                        string="Print"
+                        type="object"
+                        groups="base.group_user"
+                        invisible="state != 'done'"
+                        data-hotkey="o"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

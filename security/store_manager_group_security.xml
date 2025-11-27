@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_store_manager" model="res.groups">
+        <field name="name">Store Manager</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory"/>
+    </record>
+
+    <!-- Restrict the delivery slip report to store managers -->
+    <record id="stock.action_report_delivery" model="ir.actions.report">
+        <field name="groups_id" eval="[(6, 0, [ref('delivery_note_restriction.group_store_manager')])]"/>
+    </record>
+</odoo>
