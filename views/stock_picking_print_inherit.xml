@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <!-- Remove original print button for done state -->
-            <xpath expr="//button[@name='452']" position="replace">
+            <xpath expr="//button[@name='429']" position="replace">
                 <button name="action_print_delivery_with_count"
                         string="Print"
                         type="object"
