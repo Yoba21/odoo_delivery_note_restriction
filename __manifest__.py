@@ -10,9 +10,9 @@
         'stock',
     ],
     'data':[
+        'security/store_manager_group_security.xml',
         'views/stock_picking_print_inherit.xml',
         'report/stock_delivery_report_inherit.xml',
-        'security/store_manager_group_security.xml',
     ],
     "installable": True,
     "application": False,
